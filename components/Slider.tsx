@@ -22,6 +22,9 @@ const Slider = () => {
             >
                 <SwiperSlide>
                     <div className='relative'>
+                        <div className='absolute top-1/3 left-[15%] w-[500px] text-white text-6xl drop-shadow'>
+                        Sweet Surprise Inside Every Snail: A Meter of Fun!
+                        </div>
                         <Image src={Slider1} alt='slider 1' />
                     </div>
                 </SwiperSlide>
