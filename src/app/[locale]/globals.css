@@ -2,3 +2,41 @@
 @tailwind components;
 @tailwind utilities;
 
+.background-fb {
+    background-image: url('../../../public/assets/social-media-back.svg');
+    background-size: cover;
+    /* İsteğe bağlı: Arka planın boyutunu ayarlamak için */
+    background-position: center;
+    /* İsteğe bağlı: Arka planın konumunu ayarlamak için */
+}
+
+.background-ig {
+    background-image: url('../../../public/assets/social-media-back-1.svg');
+    background-size: cover;
+    /* İsteğe bağlı: Arka planın boyutunu ayarlamak için */
+    background-position: center;
+    /* İsteğe bağlı: Arka planın konumunu ayarlamak için */
+}
+
+.background-yt {
+    background-image: url('../../../public/assets/social-media-back-2.svg');
+    background-size: cover;
+    /* İsteğe bağlı: Arka planın boyutunu ayarlamak için */
+    background-position: center;
+    /* İsteğe bağlı: Arka planın konumunu ayarlamak için */
+}
+
+.background-tiktok {
+    background-image: url('../../../public/assets/social-media-back-3.svg');
+    background-size: cover;
+    /* İsteğe bağlı: Arka planın boyutunu ayarlamak için */
+    background-position: center;
+    /* İsteğe bağlı: Arka planın konumunu ayarlamak için */
+}
+
+.background-footer {
+    background-image: url('../../../public/assets/Vector.svg');
+    background-repeat:repeat-x;
+    background-position: top;
+    margin-top: -10px;
+}
