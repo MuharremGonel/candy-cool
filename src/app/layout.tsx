@@ -1,5 +1,5 @@
 import localFont from "next/font/local";
-import { Metadata } from 'next'
+import { Metadata } from "next";
 
 const myFont = localFont({
   src: "../../public/fonts/vag-rounded.woff2",
@@ -7,10 +7,10 @@ const myFont = localFont({
 });
 
 export const metadata: Metadata = {
-  title: 'Candy Cool',
-  description: 'Double the fun with sweet candies & cool toys',
+  title: "Candy Cool",
+  description: "Double the fun with sweet candies & cool toys",
   icons: {
-    icon: '/favicon.ico',
+    icon: "/favicon.ico",
   },
 }
 
