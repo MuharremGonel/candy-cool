@@ -35,8 +35,8 @@
 }
 
 .background-footer {
-    background-image: url('../../../public/assets/Vector.svg');
+    background-image: url('../../../public/assets/footer-bg-arrow.png');
     background-repeat:repeat-x;
     background-position: top;
-    margin-top: -10px;
+    background-color: #EB008B;
 }
