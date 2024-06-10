@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import { useRouter, useParams } from 'next/navigation';
 import { useTranslations } from "next-intl";
+import Image from 'next/image';
 
 interface Product {
   id: number;
@@ -50,7 +51,7 @@ const ProductDetailPage = () => {
   return (
     <div className="container mx-auto mt-44">
       <h1 className="text-2xl font-bold mb-4">{product.title}</h1>
-      <img src={product.image} alt={product.title} className="mb-2" />
+      <Image src={product.image} alt={product.title} className="mb-2" />
       <p>Description: {t(product.description)}</p>
       <p>Box Size: {product.boxSize}</p>
       <p>Display: {product.display}</p>
