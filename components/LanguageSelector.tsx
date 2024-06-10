@@ -1,24 +1,26 @@
 "use client";
-import { usePathname, useRouter, useSearchParams } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 import { useEffect, useState } from 'react';
 
 const LanguageSelector = () => {
   const pathname = usePathname();
   const router = useRouter();
-  const searchParams = useSearchParams();
   const t = useTranslations();
   const [locale, setLocale] = useState('');
 
   useEffect(() => {
-    const currentLocale = searchParams.get('locale') || 'en'; // Default locale
+    const pathSegments = pathname.split('/');
+    const currentLocale = pathSegments[1] || 'en'; // Default locale 'en'
     setLocale(currentLocale);
-  }, [searchParams]);
+  }, [pathname]);
 
   const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const newLocale = e.target.value;
     setLocale(newLocale);
-    router.push(`/${newLocale}`);
+
+    const newPathname = pathname.replace(`/${locale}`, `/${newLocale}`);
+    router.push(newPathname);
   };
 
   return (
@@ -27,8 +29,6 @@ const LanguageSelector = () => {
       <select
         id="language"
         onChange={handleChange}
-        defaultChecked={true}
-        defaultValue={locale}
         value={locale}
         className="border rounded p-1"
       >
